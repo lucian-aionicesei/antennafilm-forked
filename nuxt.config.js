@@ -35,6 +35,37 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // Simple usage
+    // 'wp-nuxt',
+
+    // With options
+    ['wp-nuxt', {
+      endpoint: 'http://antennafilm.local/wp-json',
+      extensions: true // For additional functions of wpapi-extensions
+      /* other options of WP-API */,
+      customRoutes: [
+        // {
+        //   extension: 'wp/v2',
+        //   route: 'cm-menus',
+        //   name: 'menus'
+        // },
+        // {
+        //   extension: 'wp/v2',
+        //   route: 'theme-settings',
+        //   name: 'settings'
+        // },
+        {
+          extension: 'wp/v2',
+          route: 'project',
+          name: 'projects'
+        },
+        // {
+        //   extension: 'wp/v2',
+        //   route: 'next-project',
+        //   name: 'nextProject'
+        // },
+      ]
+    }],
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
