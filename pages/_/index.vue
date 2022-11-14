@@ -1,7 +1,7 @@
 <template>
-<main class=" h-screen bg-primary">
-    <front-page></front-page>
-</main>
+    <main class=" h-screen bg-primary">
+        <front-page></front-page>
+    </main>
 </template>
 
 <script>

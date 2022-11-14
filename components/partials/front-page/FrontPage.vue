@@ -2,8 +2,8 @@
     <section>
         <content-wrapper>
             <div class="h-screen flex items-center">
-                <article class="grid grid-cols-3">
-                    <div>
+                <article class="grid grid-cols-3 bg-green-800w">
+                    <div class=" pr-[200px]">
                         <p>We’re a video agency with roots in Copenhagen and London.</p>
                         <p>With a combined 20 years of experience working within online marketing, internal communication, and content production, we offer end-to-end video production services exclusively tailored to our clients’ needs.</p>
                     </div>
