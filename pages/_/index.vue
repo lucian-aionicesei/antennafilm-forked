@@ -1,5 +1,5 @@
 <template>
-    <main class=" h-screen bg-primary">
+    <main class="bg-primary">
         <front-page></front-page>
     </main>
 </template>
