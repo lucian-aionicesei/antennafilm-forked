@@ -1,5 +1,5 @@
 <template>
-    <div :class="bgColor === 'dark' && 'bg-secondary'" class="px-0 md:px-16 max-w-screen-2xl m-auto relative">
+    <div :class="bgColor === 'dark' && 'bg-secondary'" class="px-0 md:px-16 relative">
         <slot></slot>
     </div>
 </template>
