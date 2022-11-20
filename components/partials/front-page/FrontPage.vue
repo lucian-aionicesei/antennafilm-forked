@@ -140,21 +140,7 @@ export default {
 
             imageOverlay.style.opacity = 1;
             this.textAnimation.reverse();
-            this.textAnimation.add(() =>{
-                // video.pause()
-                if (this.playPromise !== undefined) {
-                        playPromise.then(_ => {
-                        // Automatic playback started!
-                        // Show playing UI.
-                        // We can now safely pause video...
-                        video.pause();
-                    })
-                    .catch(error => {
-                        // Auto-play was prevented
-                        // Show paused UI.
-                        });
-                }
-            });
+            this.textAnimation.add(this.checkPromise(video));
         },
         splitText (string, opaque){
             let stringArray = string.split(' ');
@@ -189,6 +175,20 @@ export default {
             mm.add('(min-width: 1024px)', () => {
                 this.stopVideo(project)
             })
+        },
+        checkPromise(video) {
+            if (this.playPromise !== undefined) {
+                        this.playPromise.then(_ => {
+                        // Automatic playback started!
+                        // Show playing UI.
+                        // We can now safely pause video...
+                        video.pause();
+                    })
+                    .catch(error => {
+                        // Auto-play was prevented
+                        // Show paused UI.
+                        });
+                }
         }
     }
 }
@@ -196,7 +196,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
 
 .our-projects {
     grid-template-columns: 2fr 1fr 2fr;
