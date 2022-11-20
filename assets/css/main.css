@@ -23,7 +23,7 @@
       @apply font-inter;
     }
 
-    p, span, a {
+    p, a {
         @apply text-sm;
     }
 

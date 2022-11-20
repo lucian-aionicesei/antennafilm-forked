@@ -2,7 +2,7 @@
     <section>
         <content-wrapper>
             <div class="h-auto lg:h-screen flex lg:items-center max-w-screen-2xl m-auto">
-                <article class="grid grid-cols-3 bg-green-800w py-0 md:py-16 lg:pb-0 lg:pt-10">
+                <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10">
                     <div class="flex flex-col justify-between px-5 md:px-0 lg:pr-[5vw] col-span-3 lg:col-span-1 relative">
                         <div class="pt-10 max-w-[400px] md:min-w-[350px]">
                             <p>We’re a video agency with roots in Copenhagen and London.</p>
@@ -24,17 +24,16 @@
                 <div>
 
                 </div>
-                <div class="relative">
-                    <div class="aspect-video relative">
+                <div class="relative"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                    <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
                             <div class="absolute top-0 h-full w-full bg-black opacity-30"></div>
                         </div>
-                        <video @mouseenter="(e) => mouseOver(e)" @mouseleave="(e) => mouseOut(e)" loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
-                    <!-- <iframe class="aspect-video object-cover" title="vimeo-player" src="https://player.vimeo.com/video/391496725?h=51a2b8bb72" width="640" height="253" frameborder="0" allowfullscreen></iframe> -->
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl">title of video</h2>
-                    <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500">title of video</h6>
+                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-0" v-html="splitText('long title of the video')"></h2>
+                    <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
                 <div class="relative h-fit aspect-video mb-12 sm:mb-20 lg:mb-0">
                     <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
@@ -90,6 +89,16 @@
 <script>
 
 export default {
+    data() {
+        return {
+            textAnimation: this.$gsap.timeline(),
+        }
+    },
+    mounted() {
+        this.boxRotation();
+        this.splitText('title of video');
+        // this.stopVideo();
+    },
     methods: {
         mouseOver(event){
             console.log('mouse is on top')
@@ -101,10 +110,39 @@ export default {
             console.log('MOUSE OUT')
             event.target.previousElementSibling.style.opacity = 1
             event.target.pause()
-            // setTimeout(() => {
-            //     console.log('pause the video')
-            //     event.target.pause();
-            // }, 300)
+        },
+        boxRotation() {
+          const gsap = this.$gsap
+          gsap.to('.box', { rotation: 27, x: 100, duration: 1 })
+        },
+        playVideo(event){
+            // const tl = this.$gsap.timeline();
+            let smallTitle = event.target.querySelectorAll('h6 span');
+            let title = event.target.querySelectorAll('h2 span');
+            let video = event.target.querySelector('video');
+            let imageOverlay = event.target.querySelector('.img-overlay');
+
+            imageOverlay.style.opacity = 0;
+            video.play();
+            this.textAnimation.play()
+            this.textAnimation.fromTo(smallTitle, {color: 'rgb(115 115 115)', y: 0, opacity: 1}, {color: 'white', y: 30, opacity: 0, stagger: 0.08, ease: "circ.in"}, 0);
+            this.textAnimation.fromTo(title, {y: -50, opacity: 0}, {y: 0, opacity: 1, stagger: 0.08, ease: "circ.out"}, 0.3);
+        },
+        stopVideo(event){
+            let video = event.target.querySelector('video');
+            let imageOverlay = event.target.querySelector('.img-overlay');
+
+            imageOverlay.style.opacity = 1;
+            this.textAnimation.reverse()
+            this.textAnimation.call(video.pause());
+        },
+        splitText (string){
+            let stringArray = string.split(' ');
+            let newString = '';
+            stringArray.forEach(element => {
+                newString = newString + `<span class="block">${element} </span>`;
+            });
+            return newString;
         }
     }
 }
@@ -125,16 +163,6 @@ export default {
         grid-column: span 2 / span 2;
     }
 }
-
-// @media only screen and (min-width: 1024px) {
-//     .our-projects video:hover ~ h6, .our-projects h2 {
-//         visibility: hidden;
-//     }
-
-//     .our-projects video:hover ~ h2, .our-projects h6 {
-//         visibility: visible;
-//     }
-// }
 
 @media only screen and (max-width: 1024px) {
     .our-projects h6 {
