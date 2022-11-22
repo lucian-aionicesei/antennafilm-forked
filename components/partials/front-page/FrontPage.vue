@@ -25,7 +25,7 @@
                 <div>
 
                 </div>
-                <div class="relative h-fit" ref="project"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                <div class="relative h-fit" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
@@ -36,7 +36,7 @@
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-0" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie2.png" alt="video">
@@ -47,7 +47,7 @@
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-0" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie3.png" alt="video">
@@ -58,7 +58,7 @@
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-0" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie4.png" alt="video">
@@ -69,7 +69,7 @@
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-0" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
@@ -80,7 +80,7 @@
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-0" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => playVideo(e)" @mouseleave="(e) => stopVideo(e)">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
@@ -102,16 +102,29 @@
 </template>
 
 <script>
+import { useWindowSize } from 'vue-window-size';
 
 export default {
     data() {
         return {
             textAnimation: this.$gsap.timeline(),
             playPromise: undefined,
+            // windowWidth: useWindowSize().width.value,
         }
+    },
+    setup() {
+        const width = useWindowSize().width;
+            return {
+              windowWidth: width,
+            };
     },
     mounted() {
         this.videoInView();
+    },
+    computed: {
+        desktopSize(){
+            return this.windowWidth >= 1024 ? true : false
+        }
     },
     methods: {
         playVideo(event){
