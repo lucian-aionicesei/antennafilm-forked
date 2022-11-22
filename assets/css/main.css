@@ -18,6 +18,14 @@
     src: url('~assets/fonts/Inter-Bold.ttf') format('truetype');
   }
 
+@font-face {
+    font-family: 'abril';
+    font-style: normal;
+    font-weight: 400;
+    /* font-display: swap; */
+    src: url('~assets/fonts/AbrilFatface-Regular.ttf') format('truetype');
+  }
+
 @layer base {
     p, h1, h2, h3, h4, h5, h6, span, a {
       @apply font-inter;
