@@ -168,7 +168,7 @@ export default {
                     onLeave: () => {this.stopVideo(project)},
                     onEnterBack: () => {this.playVideo(project)},
                     onLeaveBack: () => {this.stopVideo(project)},
-                    // markers: true,
+                    markers: true,
                 },
             });
             });
