@@ -18,7 +18,7 @@
             </article>
         </div>
         <content-wrapper bgColor="dark">
-            <div ref="logoSlider" class="flex lg:mx-[15vw] overflow-hidden items-center max-w-screen-xl m-auto pt-4 pb-10 mr-20">
+            <div ref="logoSlider" class="flex lg:mx-[15vw] overflow-hidden items-center max-w-screen-xl m-auto pt-4 pb-10">
                 <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/distortion.png" alt="">
                 <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/holcim.png" alt="">
                 <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/iss.png" alt="">
@@ -32,11 +32,12 @@
         <content-wrapper bgColor="dark">
             <!-- <div class="absolute h-72 w-72 rounded-full blur-xl bg-rose-300 top-1/4"></div> -->
             <!-- <h6>Selected Work</h6> -->
-            <article ref="projects" class="our-projects lg:grid px-5 md:px-0 md:pl-5 lg:px-[8vw] gap-x-8 gap-y-14 py-24 max-w-screen-2xl m-auto">
+            <article ref="projects" class="our-projects lg:grid px-5 md:px-0 md:pl-5 lg:px-[8vw] gap-x-8 gap-y-14 pt-24 max-w-screen-2xl m-auto z-10">
                 <div>
 
                 </div>
-                <div class="project relative h-fit" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                    <div class="project">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
@@ -46,8 +47,10 @@
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
+                    </div>
                 </div>
-                <div class="project relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                    <div class="project">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie2.png" alt="video">
@@ -57,8 +60,10 @@
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
+                    </div>
                 </div>
-                <div class="project relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                    <div class="project">
                     <div class="aspect-video relative z-10">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie3.png" alt="video">
@@ -68,47 +73,39 @@
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
+                    </div>
                 </div>
-                <div class="project relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                    <div class="aspect-video relative z-10">
+                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                    <div class="project">
+                    <div class="aspect-video relative z-20">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie4.png" alt="video">
                             <div class="absolute top-0 h-full w-full bg-black opacity-30"></div>
                         </div>
                         <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
-                    <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
-                </div>
-                <div class="project relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                    <div class="aspect-video relative z-10">
-                        <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
-                            <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
-                            <div class="absolute top-0 h-full w-full bg-black opacity-30"></div>
-                        </div>
-                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-10" v-html="splitText('collection', true)"></h2>
+                    <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('collection')"></h6>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
-                    <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
-                <div class="project relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                    <div class="aspect-video relative z-10">
-                        <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
-                            <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
-                            <div class="absolute top-0 h-full w-full bg-black opacity-30"></div>
+                <div class="relative"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                    <div class="project">
+                        <div class="aspect-video relative z-20">
+                            <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
+                                <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
+                                <div class="absolute top-0 h-full w-full bg-black opacity-30"></div>
+                            </div>
+                            <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                         </div>
-                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                        <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-10" v-html="splitText('long title of the video', true)"></h2>
+                        <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('long title of the video')"></h6>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
-                    <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                 </div>
             </article>
         </content-wrapper>
-        <content-wrapper>
-            <div>
-
-            </div>
-        </content-wrapper>
+        <div class="bottom-wrapper h-screen w-screen relative z-0">
+            <img class=" absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
+        </div>
     </section>
 </template>
 
@@ -319,6 +316,32 @@ export default {
 
     div:nth-child(4n + 3) {
         grid-column: span 2 / span 2;
+    }
+}
+
+.our-projects div:last-child .project  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // border: red solid 4px;
+    }
+
+.our-projects div:last-child .project  {
+        position: static;
+    }
+
+.bottom-wrapper {
+width: 1511px;
+height: 675px;
+
+background: linear-gradient(180deg, rgba(250, 199, 18, 0.54) 0%, rgba(152, 54, 187, 0.46) 29.17%, rgba(66, 22, 123, 0.6875) 54.69%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+@media only screen and (min-width: 1024px) {
+    .our-projects div:last-child .project  {
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 

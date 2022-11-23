@@ -1,5 +1,5 @@
 <template>
-    <header class="site-header fixed flex items-center justify-between w-full h-16 px-10 md:px-16 font-inter font-bold text-sm z-20">
+    <header class="site-header fixed flex items-center justify-between w-full h-16 px-10 md:px-16 font-inter font-bold text-sm z-50">
         <a class=" font-abril text-3xl" href="#">antenna</a>
         <nav class="space-x-16 font-inter font-bold">
             <nuxt-link :class='currentPage === "/work" && underlinedLink' to="/work">Work</nuxt-link>
