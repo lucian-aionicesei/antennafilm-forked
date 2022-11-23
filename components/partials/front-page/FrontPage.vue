@@ -18,15 +18,15 @@
             </article>
         </div>
         <content-wrapper bgColor="dark">
-            <div ref="logoSlider" class="flex lg:mx-[15vw] overflow-hidden items-center max-w-screen-xl m-auto pt-4 pb-10">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/distortion.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/holcim.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/iss.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/sweco.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/distortion.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/iss.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/holcim.png" alt="">
-                <img class=" px-10 max-h-20 h-fit max-w-[150px] w-fit" src="../../../assets/images/logos/sweco.png" alt="">
+            <div ref="logoSlider" class="flex lg:mx-[15vw] overflow-hidden items-center max-w-screen-xl m-auto pt-4 pb-10 mr-20">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/distortion.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/holcim.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/iss.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/sweco.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/distortion.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/iss.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/holcim.png" alt="">
+                <img class="pr-20 max-h-20 h-fit max-w-[220px] w-fit" src="../../../assets/images/logos/sweco.png" alt="">
             </div>
         </content-wrapper>
         <content-wrapper bgColor="dark">
@@ -235,14 +235,14 @@ export default {
 
             loop.play(); 
             
-            // ScrollTrigger.create({  
-            //   start: 0,
-            //   end: 'max',
-            //   pin: '.container',
-            //   onUpdate: function(self) {    
-            //     self.direction === -1 ? loop.timeScale(-1) : loop.timeScale(1)    // onUpdate of the ST toggling direction of tween via changing its timeScale depending on direction of scroll
-            //   }  
-            // })
+            this.$ScrollTrigger.create({  
+              start: 0,
+              end: 'max',
+              pin: '.container',
+              onUpdate: function(self) {    
+                self.direction === -1 ? loop.timeScale(-1) : loop.timeScale(1)    // onUpdate of the ST toggling direction of tween via changing its timeScale depending on direction of scroll
+              }  
+            })
         },
         horisontalLoop(items, config) {
             let gsap = this.$gsap;
