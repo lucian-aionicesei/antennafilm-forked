@@ -29,9 +29,9 @@ export default {
 
 <style scoped>
 
-    header {
+    /* header {
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
         backdrop-filter: blur(3px);
-    }
+    } */
 
 </style>

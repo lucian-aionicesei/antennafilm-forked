@@ -33,7 +33,8 @@ export default {
     dirs: [
       '~/components',
       '~/components/partials',
-      '~/components/wrappers'
+      '~/components/partials/front-page/partials',
+      '~/components/wrappers',
     ]
   },
 
