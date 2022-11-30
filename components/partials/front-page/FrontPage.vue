@@ -1,9 +1,7 @@
 <template>
     <section>
         <div class="h-auto lg:h-screen flex lg:items-center relative">
-            <div class="absolute w-full top-0 flex justify-center">
-              <img class="absolute" src="../../../assets/images/layout/star.svg" alt="">
-            </div>
+            <waves class="absolute top-0 w-full"></waves>
             <img class=" pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
             <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10 px-0 md:px-16 max-w-screen-2xl mx-auto">
                     <div class="flex flex-col justify-between px-5 md:px-0 lg:pr-[5vw] col-span-3 lg:col-span-1 relative">

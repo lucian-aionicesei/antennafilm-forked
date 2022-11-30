@@ -51,7 +51,6 @@ export default {
     /* Module Options */
     extraPlugins: {
       scrollTrigger: true,
-      MorphSVGPlugin: true,
     }
   },
 
