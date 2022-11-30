@@ -17,10 +17,15 @@
                     </div>
             </article>
         </div>
-        <logo-slider></logo-slider>
+        <!-- <logo-slider></logo-slider> -->
         <content-wrapper bgColor="dark">
             <!-- <img src="../../../assets/images/layout/neon-circle.png" class="absolute top-0 w-[1300px] h-[1600px]" alt=""> -->
-            <article ref="projects" class="our-projects lg:grid px-5 md:px-0 md:pl-5 lg:px-[8vw] gap-x-8 gap-y-14 pt-24 max-w-screen-2xl m-auto z-10">
+            <div class="absolute origin-top-left -rotate-90 translate-y-52 w-fit text-zinc-200" ref="selectedTitle">
+              <h6>selected projects</h6>
+              <div ref="underline" class="h-[1px] bg-zinc-500 scale-x-0 origin-top-left"></div>
+              <div ref="underline2" class="h-[1px] bg-white scale-x-0 origin-top-left"></div>
+            </div>
+            <article ref="projects" class="our-projects lg:grid px-5 md:px-0 lg:px-[8vw] gap-x-8 gap-y-14 pt-24 max-w-screen-2xl m-auto z-10">
                 <div>
 
                 </div>
@@ -33,7 +38,7 @@
                         </div>
                         <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
+                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
@@ -46,7 +51,7 @@
                         </div>
                         <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/uber.mp4" alt="video"></video>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
+                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
@@ -59,7 +64,7 @@
                         </div>
                         <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
+                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
@@ -72,7 +77,7 @@
                         </div>
                         <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
-                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-10" v-html="splitText('collection', true)"></h2>
+                    <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2 z-10" v-html="splitText('collection', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('collection')"></h6>
                     </div>
                 </div>
@@ -85,38 +90,45 @@
                             </div>
                             <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                         </div>
-                        <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-2xl md:text-4xl flex gap-x-2 z-10" v-html="splitText('long title of the video', true)"></h2>
+                        <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2 z-10" v-html="splitText('long title of the video', true)"></h2>
                         <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
             </article>
         </content-wrapper>
+        <div class="w-full bg-secondary">
+            <div class="pb-20 pt-10 lg:pb-0 relative bg-secondary w-full max-w-screen-2xl m-auto px-0 md:px-16">
+                <div class="flex items-center border-l-2 border-accent1 h-10 lg:absolute z-20 lg:translate-y-32 ml-5 md:ml-0">
+                    <a href="#" class="pl-4 font-bold">see more work</a>
+                </div>
+            </div>
+        </div>
         <div class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
             <img class="hidden lg:block pointer-events-none absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
-            <div class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
+            <div ref="reviews" class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
                 <div class=" text-right relative">
-                    <div class="lg:absolute right-0 flex flex-col h-[55%] lg:border-r-[0.5px] w-fit pr-4">
+                    <div class="review lg:absolute right-0 flex flex-col h-[55%] lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
                         <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
                     </div>
                 </div>
                 <div class=" lg:text-right relative">
-                    <div class="lg:absolute right-0 flex flex-col h-5/6 lg:border-r-[0.5px] w-fit pr-4 ml-auto">
+                    <div class="review lg:absolute right-0 flex flex-col h-5/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4 ml-auto">
                         <p class=" max-w-xs pb-4 mt-auto sm:w-max">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
                     </div>
                 </div>
                 <div class=" text-right relative">
-                    <div class="lg:absolute right-0 flex flex-col h-4/6 lg:border-r-[0.5px] w-fit pr-4">
+                    <div class="review lg:absolute right-0 flex flex-col h-4/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
                         <p class=" max-w-xs pb-4 mt-auto sm:w-max">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
                     </div>
                 </div>
                 <div class="relative">
-                    <div class="lg:absolute right-0 flex flex-col h-5/6 lg:border-l-[0.5px] w-fit lg:pl-4 ml-auto">
+                    <div class="review lg:absolute right-0 flex flex-col h-5/6 lg:border-l-[0.5px] border-zinc-400 w-fit lg:pl-4 ml-auto">
                         <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 left-0 -translate-x-[2px]"></div>
@@ -129,8 +141,11 @@
 
 <script>
 import { useWindowSize } from "vue-window-size";
+import { from } from "webpack-sources/lib/CompatSource";
+import ContentWrapper from "../../wrappers/ContentWrapper.vue";
 
 export default {
+  components: { ContentWrapper },
   data() {
     return {
       textAnimation: this.$gsap.timeline(),
@@ -146,6 +161,8 @@ export default {
   mounted() {
     this.videoInView();
     // this.animateLogoSlider();
+    this.animateTitle();
+    // this.animateReviews();
   },
   computed: {
     desktopSize() {
@@ -251,6 +268,74 @@ export default {
           });
       }
     },
+    animateTitle() {
+      let title = this.$refs.selectedTitle;
+      let projects = this.$refs.projects;
+      let gsap = this.$gsap.timeline();
+      let underline = this.$refs.underline;
+      let underline2 = this.$refs.underline2;
+
+      gsap.to(
+        title,
+        {
+          scrollTrigger: {
+            trigger: projects,
+            start: "top-=200px top",
+            end: "bottom bottom",
+            markers: true,
+            scrub: true,
+          },
+          y: "120vh",
+          ease: "none",
+          duration: 1,
+        },
+        0
+      );
+      gsap.to(
+        underline,
+        {
+          scrollTrigger: {
+            trigger: projects,
+            start: "top-=200px top",
+            end: "bottom bottom",
+            markers: true,
+            scrub: true,
+            onToggle: (self) => {
+              // console.log("progress", self.progress);
+              // console.log("direction:", self.direction);
+              console.log("toggled to active:", self.isActive);
+              // self.style.transform = "scaleX(0)";
+              // underline.style.transform = "scaleX(0)";
+            },
+          },
+          scaleX: 4,
+          duration: 1,
+        },
+        0
+      );
+      gsap.to(
+        underline,
+        {
+          scaleX: 0,
+          // duration: 1,
+        },
+        0
+      );
+    },
+    // animateReviews() {
+    //   let reviews = this.$refs.reviews.querySelectorAll(".review");
+
+    //   reviews.forEach((review) => {
+    //     let gsap = this.$gsap;
+    //     gsap.from(element, {
+    //       height: 0,
+    //       duration: 3,
+    //       backgroundColor: "red",
+    //     });
+    //   });
+
+    //   console.log(reviews);
+    // },
   },
 };
 </script>
