@@ -50,7 +50,8 @@ export default {
   gsap: {
     /* Module Options */
     extraPlugins: {
-      scrollTrigger: true
+      scrollTrigger: true,
+      MorphSVGPlugin: true,
     }
   },
 

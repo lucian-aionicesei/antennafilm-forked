@@ -1,6 +1,9 @@
 <template>
     <section>
         <div class="h-auto lg:h-screen flex lg:items-center relative">
+            <div class="absolute w-full top-0 flex justify-center">
+              <img class="absolute" src="../../../assets/images/layout/star.svg" alt="">
+            </div>
             <img class=" pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
             <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10 px-0 md:px-16 max-w-screen-2xl mx-auto">
                     <div class="flex flex-col justify-between px-5 md:px-0 lg:pr-[5vw] col-span-3 lg:col-span-1 relative">
@@ -99,36 +102,36 @@
         <div class="w-full bg-secondary">
             <div class="pb-20 pt-10 lg:pb-0 relative bg-secondary w-full max-w-screen-2xl m-auto px-0 md:px-16">
                 <div class="flex items-center border-l-2 border-accent1 h-10 lg:absolute z-20 lg:translate-y-32 ml-5 md:ml-0">
-                    <a href="#" class="pl-4 font-bold">see more work</a>
+                    <p @click="animateReviews()" class="pl-4 font-bold cursor-pointer">see more work</p>
                 </div>
             </div>
         </div>
         <div class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
             <img class="hidden lg:block pointer-events-none absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
-            <div ref="reviews" class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
+            <div class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
                 <div class=" text-right relative">
-                    <div class="review lg:absolute right-0 flex flex-col h-[55%] lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
-                        <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
-                        <span class=" font-semibold text-sm">Marlene, AKVA</span>
+                    <div ref="review" class="lg:absolute right-0 flex flex-col h-[55%] lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
+                          <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
+                          <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
                     </div>
                 </div>
                 <div class=" lg:text-right relative">
-                    <div class="review lg:absolute right-0 flex flex-col h-5/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4 ml-auto">
+                    <div class="lg:absolute right-0 flex flex-col h-5/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4 ml-auto">
                         <p class=" max-w-xs pb-4 mt-auto sm:w-max">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
                     </div>
                 </div>
                 <div class=" text-right relative">
-                    <div class="review lg:absolute right-0 flex flex-col h-4/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
+                    <div class="lg:absolute right-0 flex flex-col h-4/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
                         <p class=" max-w-xs pb-4 mt-auto sm:w-max">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
                     </div>
                 </div>
                 <div class="relative">
-                    <div class="review lg:absolute right-0 flex flex-col h-5/6 lg:border-l-[0.5px] border-zinc-400 w-fit lg:pl-4 ml-auto">
+                    <div class="lg:absolute right-0 flex flex-col h-5/6 lg:border-l-[0.5px] border-zinc-400 w-fit lg:pl-4 ml-auto">
                         <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
                         <span class=" font-semibold text-sm">Marlene, AKVA</span>
                         <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 left-0 -translate-x-[2px]"></div>
@@ -141,7 +144,6 @@
 
 <script>
 import { useWindowSize } from "vue-window-size";
-import { from } from "webpack-sources/lib/CompatSource";
 import ContentWrapper from "../../wrappers/ContentWrapper.vue";
 
 export default {
@@ -162,7 +164,6 @@ export default {
     this.videoInView();
     // this.animateLogoSlider();
     this.animateTitle();
-    // this.animateReviews();
   },
   computed: {
     desktopSize() {
@@ -322,20 +323,15 @@ export default {
         0
       );
     },
-    // animateReviews() {
-    //   let reviews = this.$refs.reviews.querySelectorAll(".review");
+    animateReviews() {
+      let review = this.$refs.review;
+      // let
+      let tl = this.$gsap.timeline();
 
-    //   reviews.forEach((review) => {
-    //     let gsap = this.$gsap;
-    //     gsap.from(element, {
-    //       height: 0,
-    //       duration: 3,
-    //       backgroundColor: "red",
-    //     });
-    //   });
-
-    //   console.log(reviews);
-    // },
+      tl.from(review, {
+        height: 0,
+      });
+    },
   },
 };
 </script>
