@@ -8,14 +8,3 @@
 
 
 </template>
-
-<script>
-export default {
-  mounted() {
-    this.animatePath();
-  },
-  methods: {
-    animatePath() {},
-  },
-};
-</script>
