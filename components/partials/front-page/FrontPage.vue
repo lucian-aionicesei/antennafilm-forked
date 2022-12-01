@@ -1,10 +1,58 @@
 <template>
     <section>
-        <div class="h-auto lg:h-screen flex lg:items-center relative">
-            <div class="absolute w-full top-0 flex justify-center">
-              <img class="absolute" src="../../../assets/images/layout/star.svg" alt="">
+        <div @mousemove="(e) => followMouse(e)" @click="sendSignal()" class="h-auto lg:h-screen flex lg:items-center relative">
+            <!-- <waves class="absolute top-0 w-full"></waves> -->
+            <div ref="wavesContainer" class=" overflow-hidden w-full h-full absolute flex items-center justify-center">
+              <div class=" overflow-hidden relative w-full h-full">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[50px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[100px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[150px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[200px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[250px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[300px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[350px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[400px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[450px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[500px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[550px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[600px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[650px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[725px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1050px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1200px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1400px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1700px]" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+              <!-- <div class="relative w-full h-full">
+                  <img class="absolute top-0 left-24 w-[300px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute top-0 left-20 w-[400px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute top-0 left-16 w-[500px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-5 left-14 w-[600px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-6 left-12 w-[700px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-7 left-8 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-8 left-4 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-9 left-2 w-[1000px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-10 left-0 w-[1100px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-11 left-0 w-[1200px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-12 left-0 w-[1300px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-14 left-0 w-[1400px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-16 left-0 w-[1500px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="absolute -top-20 left-0 w-[1600px]" src="../../../assets/images/layout/star.svg" alt="">
+              </div> -->
+              <!-- <div class="relative w-full h-full">
+                <img class="absolute -top-28 -left-32 w-[1000px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 -left-32 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 -left-32 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 -left-28 w-[700px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 -left-20 w-[600px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 -left-16 w-[500px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 -left-10 w-[400px]" src="../../../assets/images/layout/star.svg" alt="">
+                <img class="absolute -top-28 w-[300px]" src="../../../assets/images/layout/star.svg" alt="">
+              </div> -->
             </div>
-            <img class=" pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
+            <img class="pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
             <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10 px-0 md:px-16 max-w-screen-2xl mx-auto">
                     <div class="flex flex-col justify-between px-5 md:px-0 lg:pr-[5vw] col-span-3 lg:col-span-1 relative">
                         <div class="pt-10 max-w-[400px] md:min-w-[350px]">
@@ -151,6 +199,8 @@ export default {
   data() {
     return {
       textAnimation: this.$gsap.timeline(),
+      wavesAnimation: this.$gsap.timeline(),
+      followAnimation: this.$gsap.timeline(),
       playPromise: undefined,
     };
   },
@@ -331,6 +381,36 @@ export default {
       tl.from(review, {
         height: 0,
       });
+    },
+    followMouse(event) {
+      console.log("clientX", event.clientX, "clientY", event.clientY);
+      console.log(this.$refs.wave);
+      let waves = document.querySelectorAll(".wave");
+      this.followAnimation = this.$gsap.timeline();
+
+      this.followAnimation.to(waves, {
+        x: event.clientX,
+        y: event.clientY,
+        stagger: { each: 0.05 },
+      });
+
+      // waves.forEach((wave, index) => {
+      //   // wave.style.left = `${event.clientX}px`;
+      //   // wave.style.top = `${event.clientY}px`;
+
+      //   this.followAnimation.to(wave, { x: event.clientX, y: event.clientY });
+      // });
+    },
+    sendSignal() {
+      console.log("send signal");
+      let waves = document.querySelectorAll(".wave");
+      this.wavesAnimation = this.$gsap.timeline();
+
+      this.wavesAnimation.fromTo(
+        waves,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.1, stagger: { each: 0.02 } }
+      );
     },
   },
 };
