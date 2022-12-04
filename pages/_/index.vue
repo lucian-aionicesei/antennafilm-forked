@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    // layout: 'test'
-}
+  // layout: 'test'
+};
 </script>

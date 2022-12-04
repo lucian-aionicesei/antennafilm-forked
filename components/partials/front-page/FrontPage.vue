@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div @mousemove="(e) => followMouse(e)" @click="sendSignal()" class="h-auto lg:h-screen flex lg:items-center relative">
+        <div @mousemove="(e) => followMouse(e)" @click="sendSignal()" class="fatherContainer h-auto lg:h-screen flex lg:items-center relative">
             <!-- <waves class="absolute top-0 w-full"></waves> -->
             <div ref="wavesContainer" class=" overflow-hidden w-full h-full absolute flex items-center justify-center">
               <div class=" overflow-hidden relative w-full h-full">
@@ -19,11 +19,11 @@
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[650px]" src="../../../assets/images/layout/star.svg" alt="">
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[725px]" src="../../../assets/images/layout/star.svg" alt="">
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <!-- <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1050px]" src="../../../assets/images/layout/star.svg" alt="">
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1200px]" src="../../../assets/images/layout/star.svg" alt="">
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1400px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1700px]" src="../../../assets/images/layout/star.svg" alt="">
+                  <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1700px]" src="../../../assets/images/layout/star.svg" alt=""> -->
               </div>
               <!-- <div class="relative w-full h-full">
                   <img class="absolute top-0 left-24 w-[300px]" src="../../../assets/images/layout/star.svg" alt="">
@@ -150,11 +150,11 @@
         <div class="w-full bg-secondary">
             <div class="pb-20 pt-10 lg:pb-0 relative bg-secondary w-full max-w-screen-2xl m-auto px-0 md:px-16">
                 <div class="flex items-center border-l-2 border-accent1 h-10 lg:absolute z-20 lg:translate-y-32 ml-5 md:ml-0">
-                    <p @click="animateReviews()" class="pl-4 font-bold cursor-pointer">see more work</p>
+                    <p class="pl-4 font-bold cursor-pointer">see more work</p>
                 </div>
             </div>
         </div>
-        <div class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
+        <!-- <div class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
             <img class="hidden lg:block pointer-events-none absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
             <div class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
                 <div class=" text-right relative">
@@ -186,6 +186,42 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+        <div class="cursorContainer pointer-events-none z-30 w-3 h-3 bg-white absolute top-0 left-0 rounded-full origin-center -translate-y-2/4 -translate-x-2/4">
+              <article class=" w-[300px] ml-10">
+                <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
+                <span class=" font-semibold text-sm">Marlene, AKVA</span>
+              </article>
+        </div>
+        <div  class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
+            <img class="hidden lg:block pointer-events-none absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
+            <div @mousemove="(e) => followForReviews(e)" class=" w-full h-full overflow-hidden relative -z-10">
+              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+              <div class="opacity-20 hover:opacity-50 w-[140vw] h-[140vw] absolute origin-bottom left-1/2 bottom-[100px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[140vw] h-[140vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+              <div class="opacity-20 hover:opacity-50 w-[130vw] h-[130vw] absolute origin-bottom left-1/2 bottom-[200px] rounded-full -translate-x-2/4">
+                <img class=" reviews-line pointer-events-none w-[130vw] h-[130vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+              <div class="opacity-20 hover:opacity-50 w-[120vw] h-[120vw] absolute origin-bottom left-1/2 bottom-[300px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[120vw] h-[120vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+              <div class="opacity-20 hover:opacity-50 w-[110vw] h-[110vw] absolute origin-bottom left-1/2 bottom-[400px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[110vw] h-[110vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+              <div class="opacity-20 hover:opacity-50 w-[100vw] h-[100vw] absolute origin-bottom left-1/2 bottom-[500px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[100vw] h-[100vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              </div>
+            </div>
+            <!-- <div class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
+              
+            </div> -->
+        </div>
+        <!-- <waves></waves> -->
+        <div class="w-screen h-screen">
+
         </div>
     </section>
 </template>
@@ -193,15 +229,23 @@
 <script>
 import { useWindowSize } from "vue-window-size";
 import ContentWrapper from "../../wrappers/ContentWrapper.vue";
+import Waves from "./partials/Waves.vue";
 
 export default {
-  components: { ContentWrapper },
+  components: { ContentWrapper, Waves },
   data() {
     return {
       textAnimation: this.$gsap.timeline(),
       wavesAnimation: this.$gsap.timeline(),
       followAnimation: this.$gsap.timeline(),
+      reviewsAnimation: this.$gsap.timeline(),
+      rotateAnimation: this.$gsap.timeline(),
       playPromise: undefined,
+      reviews: [
+        {
+          name: "Marlene, Akva",
+        },
+      ],
     };
   },
   setup() {
@@ -214,6 +258,8 @@ export default {
     this.videoInView();
     // this.animateLogoSlider();
     this.animateTitle();
+    this.rotateFlower();
+    console.log(this.$MotionPathPlugin);
   },
   computed: {
     desktopSize() {
@@ -383,8 +429,8 @@ export default {
       });
     },
     followMouse(event) {
-      console.log("clientX", event.clientX, "clientY", event.clientY);
-      console.log(this.$refs.wave);
+      // console.log("clientX", event.clientX, "clientY", event.clientY);
+      // console.log(this.$refs.wave);
       let waves = document.querySelectorAll(".wave");
       this.followAnimation = this.$gsap.timeline();
 
@@ -411,6 +457,36 @@ export default {
         { opacity: 0 },
         { opacity: 1, duration: 0.1, stagger: { each: 0.02 } }
       );
+    },
+    rotateFlower() {
+      // console.log("send signal");
+      let waves = document.querySelectorAll(".wave");
+      this.rotateAnimation = this.$gsap.timeline();
+
+      this.rotateAnimation.set(waves, {
+        xPercent: -50,
+        yPercent: -50,
+        transformOrigin: "50% 50%",
+      });
+
+      this.rotateAnimation.to(waves, {
+        rotate: -360,
+        duration: 100,
+        repeat: -1,
+        ease: "none",
+      });
+    },
+    followForReviews(event) {
+      console.log(event);
+      let cursorContainer = document.querySelector(".cursorContainer");
+
+      console.log("clientX", event.pageX, "clientY", event.pageY);
+      this.reviewsAnimation = this.$gsap.timeline();
+
+      this.reviewsAnimation.to(cursorContainer, {
+        x: event.pageX,
+        y: event.pageY,
+      });
     },
   },
 };
@@ -440,18 +516,40 @@ export default {
   position: static;
 }
 
-.bottom-wrapper {
-  background: linear-gradient(
-    180deg,
-    rgba(250, 199, 18, 0.54) 0%,
-    rgba(152, 54, 187, 0.46) 29.17%,
-    rgba(66, 22, 123, 0.6875) 54.69%,
-    rgba(0, 0, 0, 0.5) 100%
-  );
-}
+// .fatherContainer {
+//   background: linear-gradient(
+//     180deg,
+//     rgba(11, 52, 218, 0.47) 0%,
+//     rgba(0, 0, 0, 0.5) 100%,
+//     #111111 100%
+//   );
+// }
+
+// .bottom-wrapper {
+//   background: linear-gradient(
+//     180deg,
+//     rgba(250, 199, 18, 0.54) 0%,
+//     rgba(152, 54, 187, 0.46) 29.17%,
+//     rgba(66, 22, 123, 0.6875) 54.69%,
+//     rgba(0, 0, 0, 0.5) 100%
+//   );
+// }
 
 .reviews-container {
   grid-template-columns: 0.8fr 0.35fr 0.8fr 1fr;
+}
+
+.reviews-line {
+  animation: spin 150s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 @media only screen and (min-width: 1024px) {

@@ -51,6 +51,7 @@ export default {
     /* Module Options */
     extraPlugins: {
       scrollTrigger: true,
+      motionPath: true,
     }
   },
 
