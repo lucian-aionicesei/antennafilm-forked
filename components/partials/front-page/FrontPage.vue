@@ -25,32 +25,6 @@
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1400px]" src="../../../assets/images/layout/star.svg" alt="">
                   <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1700px]" src="../../../assets/images/layout/star.svg" alt=""> -->
               </div>
-              <!-- <div class="relative w-full h-full">
-                  <img class="absolute top-0 left-24 w-[300px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute top-0 left-20 w-[400px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute top-0 left-16 w-[500px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-5 left-14 w-[600px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-6 left-12 w-[700px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-7 left-8 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-8 left-4 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-9 left-2 w-[1000px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-10 left-0 w-[1100px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-11 left-0 w-[1200px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-12 left-0 w-[1300px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-14 left-0 w-[1400px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-16 left-0 w-[1500px]" src="../../../assets/images/layout/star.svg" alt="">
-                  <img class="absolute -top-20 left-0 w-[1600px]" src="../../../assets/images/layout/star.svg" alt="">
-              </div> -->
-              <!-- <div class="relative w-full h-full">
-                <img class="absolute -top-28 -left-32 w-[1000px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 -left-32 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 -left-32 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 -left-28 w-[700px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 -left-20 w-[600px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 -left-16 w-[500px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 -left-10 w-[400px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="absolute -top-28 w-[300px]" src="../../../assets/images/layout/star.svg" alt="">
-              </div> -->
             </div>
             <img class="pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
             <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10 px-0 md:px-16 max-w-screen-2xl mx-auto">
@@ -154,72 +128,39 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
-            <img class="hidden lg:block pointer-events-none absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
-            <div class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
-                <div class=" text-right relative">
-                    <div ref="review" class="lg:absolute right-0 flex flex-col h-[55%] lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
-                          <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
-                          <span class=" font-semibold text-sm">Marlene, AKVA</span>
-                        <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
-                    </div>
-                </div>
-                <div class=" lg:text-right relative">
-                    <div class="lg:absolute right-0 flex flex-col h-5/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4 ml-auto">
-                        <p class=" max-w-xs pb-4 mt-auto sm:w-max">We love antenna very good company. We are happy with the final result.</p>
-                        <span class=" font-semibold text-sm">Marlene, AKVA</span>
-                        <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
-                    </div>
-                </div>
-                <div class=" text-right relative">
-                    <div class="lg:absolute right-0 flex flex-col h-4/6 lg:border-r-[0.5px] border-zinc-400 w-fit pr-4">
-                        <p class=" max-w-xs pb-4 mt-auto sm:w-max">We love antenna very good company. We are happy with the final result.</p>
-                        <span class=" font-semibold text-sm">Marlene, AKVA</span>
-                        <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 right-0 translate-x-[2px]"></div>
-                    </div>
-                </div>
-                <div class="relative">
-                    <div class="lg:absolute right-0 flex flex-col h-5/6 lg:border-l-[0.5px] border-zinc-400 w-fit lg:pl-4 ml-auto">
-                        <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
-                        <span class=" font-semibold text-sm">Marlene, AKVA</span>
-                        <div class="hidden lg:block h-1 w-1 bg-white rounded-full absolute bottom-0 left-0 -translate-x-[2px]"></div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <div class="cursorContainer pointer-events-none z-30 w-3 h-3 bg-white absolute top-0 left-0 rounded-full origin-center -translate-y-2/4 -translate-x-2/4">
-              <article class=" w-[300px] ml-10">
-                <p class=" max-w-xs pb-4 mt-auto">We love antenna very good company. We are happy with the final result.</p>
-                <span class=" font-semibold text-sm">Marlene, AKVA</span>
+        <div class="cursorContainer pointer-events-none z-30 absolute top-0 left-0 rounded-full origin-top-left hidden scale-0">
+              <article class="reviewComment w-[300px] ml-10 -translate-y-full">
+                <p class=" max-w-xs pb-4 mt-auto" v-text="displayedReview.comment"></p>
+                <span class=" font-semibold text-sm" v-text="displayedReview.name"></span>
               </article>
+              <div class="dot w-3 h-3 rounded-full bg-white absolute top-0 left-0 -translate-x-2/4 -translate-y-2/4"></div>
         </div>
         <div  class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
-            <img class="hidden lg:block pointer-events-none absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
+            <img @mouseover="hideReview()" class="hidden lg:block absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
             <div @mousemove="(e) => followForReviews(e)" class=" w-full h-full overflow-hidden relative -z-10">
-              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              <div data-index="0" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
               </div>
-              <div class="opacity-20 hover:opacity-50 w-[140vw] h-[140vw] absolute origin-bottom left-1/2 bottom-[100px] rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[140vw] h-[140vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              <div data-index="0" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
               </div>
-              <div class="opacity-20 hover:opacity-50 w-[130vw] h-[130vw] absolute origin-bottom left-1/2 bottom-[200px] rounded-full -translate-x-2/4">
-                <img class=" reviews-line pointer-events-none w-[130vw] h-[130vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              <div data-index="1" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[100px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
               </div>
-              <div class="opacity-20 hover:opacity-50 w-[120vw] h-[120vw] absolute origin-bottom left-1/2 bottom-[300px] rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[120vw] h-[120vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              <div data-index="2" @mouseover="toggleReview()" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[200px] rounded-full -translate-x-2/4">
+                <img class=" reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
               </div>
-              <div class="opacity-20 hover:opacity-50 w-[110vw] h-[110vw] absolute origin-bottom left-1/2 bottom-[400px] rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[110vw] h-[110vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[300px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
               </div>
-              <div class="opacity-20 hover:opacity-50 w-[100vw] h-[100vw] absolute origin-bottom left-1/2 bottom-[500px] rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[100vw] h-[100vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star.svg" alt="">
+              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[400px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
+              </div>
+              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[500px] rounded-full -translate-x-2/4">
+                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
               </div>
             </div>
-            <!-- <div class="reviews-container flex flex-col gap-y-16 justify-center lg:grid w-full h-full -z-10 max-w-screen-xl px-5 md:px-16 lg:px-0">
-              
-            </div> -->
         </div>
-        <!-- <waves></waves> -->
         <div class="w-screen h-screen">
 
         </div>
@@ -240,12 +181,39 @@ export default {
       followAnimation: this.$gsap.timeline(),
       reviewsAnimation: this.$gsap.timeline(),
       rotateAnimation: this.$gsap.timeline(),
+      reviewVisible: this.$gsap.timeline(),
       playPromise: undefined,
       reviews: [
         {
           name: "Marlene, Akva",
+          comment:
+            "We love antenna very good company. We are happy with the final result.",
+        },
+        {
+          name: "Sylvia, Kea",
+          comment:
+            "Lorem ipsum dolor sit amet hac mauris nunc lectus. Quisque proin a mauris vulputate phasellus nisi curabitur neque sapien feugiat senectus fringilla aliqua ultrices. Eiusmod pellentesque consequat tempor eros suspendisse lacus at duis nisl augue eget tristique ac quisque. Vitae eget ornare faucibus augue urna hac elementum mollis urna imperdiet.",
+        },
+        {
+          name: "Lucian, Akva",
+          comment:
+            "Nunc rhoncus mauris netus sed aliquam volutpat enim. Vestibulum bibendum sapien etiam nec at ultricies laoreet mauris consectetur lacus mauris incididunt luctus.",
+        },
+        {
+          name: "Sylvia, Kea",
+          comment:
+            "Lorem ipsum dolor sit amet hac mauris nunc lectus. Quisque proin a mauris vulputate phasellus nisi curabitur neque sapien feugiat senectus fringilla aliqua ultrices. Eiusmod pellentesque consequat tempor eros suspendisse lacus at duis nisl augue eget tristique ac quisque. Vitae eget ornare faucibus augue urna hac elementum mollis urna imperdiet.",
+        },
+        {
+          name: "Marlene, Akva",
+          comment:
+            "We love antenna very good company. We are happy with the final result.",
         },
       ],
+      displayedReview: {
+        name: "",
+        comment: "",
+      },
     };
   },
   setup() {
@@ -477,8 +445,18 @@ export default {
       });
     },
     followForReviews(event) {
-      console.log(event);
+      console.log(event.target.getAttribute("data-index"));
+      let reviewsIndex = event.target.getAttribute("data-index")
+        ? Number(event.target.getAttribute("data-index"))
+        : null;
       let cursorContainer = document.querySelector(".cursorContainer");
+
+      if (reviewsIndex !== null) {
+        this.displayedReview = {
+          name: this.reviews[reviewsIndex].name,
+          comment: this.reviews[reviewsIndex].comment,
+        };
+      }
 
       console.log("clientX", event.pageX, "clientY", event.pageY);
       this.reviewsAnimation = this.$gsap.timeline();
@@ -487,6 +465,42 @@ export default {
         x: event.pageX,
         y: event.pageY,
       });
+    },
+    toggleReview() {
+      let cursorContainer = document.querySelector(".cursorContainer");
+
+      this.reviewVisible = this.$gsap.timeline();
+
+      this.reviewVisible.to(
+        cursorContainer,
+        {
+          display: "block",
+          duration: 0,
+        },
+        0
+      );
+      this.reviewVisible.to(
+        cursorContainer,
+        {
+          scale: 1,
+          duration: 0.8,
+        },
+        0
+      );
+    },
+    hideReview() {
+      let cursorContainer = document.querySelector(".cursorContainer");
+
+      this.reviewVisible = this.$gsap.timeline();
+
+      this.reviewVisible.to(
+        cursorContainer,
+        {
+          scale: 0,
+          duration: 0.8,
+        },
+        0
+      );
     },
   },
 };
@@ -516,14 +530,9 @@ export default {
   position: static;
 }
 
-// .fatherContainer {
-//   background: linear-gradient(
-//     180deg,
-//     rgba(11, 52, 218, 0.47) 0%,
-//     rgba(0, 0, 0, 0.5) 100%,
-//     #111111 100%
-//   );
-// }
+.fatherContainer {
+  background: linear-gradient(180deg, rgba(0, 40, 253, 0) 0%, #0029ff 100%);
+}
 
 // .bottom-wrapper {
 //   background: linear-gradient(
