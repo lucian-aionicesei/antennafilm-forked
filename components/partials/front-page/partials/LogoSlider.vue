@@ -1,14 +1,14 @@
 <template>
     <content-wrapper bgColor="dark">
             <div ref="logoSlider" class="flex lg:mx-[15vw] overflow-hidden items-center max-w-screen-xl md:mx-auto mx-5 pt-4 pb-10">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/holcim.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/distortion.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/iss.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/sweco.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/distortion.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/iss.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/holcim.png" alt="">
-                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit" src="../../../../assets/images/logos/sweco.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/holcim.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/distortion.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/iss.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/sweco.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/distortion.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/iss.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/holcim.png" alt="">
+                <img class="pr-20 max-h-[4.3rem] h-fit max-w-[220px] w-fit z-40" src="../../../../assets/images/logos/sweco.png" alt="">
             </div>
     </content-wrapper>
 </template>

@@ -42,78 +42,79 @@
                     </div>
             </article>
         </div>
-        <!-- <logo-slider></logo-slider> -->
+        <logo-slider></logo-slider>
+        <div class="projectsBubble -translate-y-1/2 -translate-x-1/2 absolute top-0 w-[400px] h-[400px] 2xl:w-[550px] 2xl:h-[550px] rounded-full z-30 pointer-events-none hidden" alt=""></div>
         <content-wrapper bgColor="dark">
             <!-- <img src="../../../assets/images/layout/neon-circle.png" class="absolute top-0 w-[1300px] h-[1600px]" alt=""> -->
-            <div class="absolute origin-top-left -rotate-90 translate-y-52 w-fit text-zinc-200" ref="selectedTitle">
+            <div class="absolute pointer-events-none origin-top-left -rotate-90 translate-y-52 w-fit text-zinc-200 z-40" ref="selectedTitle">
               <h6>selected projects</h6>
               <div ref="underline" class="h-[1px] bg-zinc-500 scale-x-0 origin-top-left"></div>
               <div ref="underline2" class="h-[1px] bg-white scale-x-0 origin-top-left"></div>
             </div>
-            <article ref="projects" class="our-projects lg:grid px-5 md:px-0 lg:px-[8vw] gap-x-8 gap-y-14 pt-24 max-w-screen-2xl m-auto z-10">
+            <article @mousemove="(e) => followForProjects(e)" @mouseover="toggleBubble()" @mouseleave="hideBubble()" ref="projects" class="our-projects lg:grid px-5 md:px-0 lg:px-[8vw] gap-x-8 gap-y-14 pt-24 max-w-screen-2xl m-auto z-10">
                 <div>
 
                 </div>
-                <div class="relative h-fit" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit z-40" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="project">
-                    <div class="aspect-video relative z-10">
+                    <div class="aspect-video relative z-40">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
-                            <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
+                            <!-- <div class="absolute top-0 h-full w-full bg-black opacity-40"></div> -->
                         </div>
-                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                        <video data-type="project" loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="project">
-                    <div class="aspect-video relative z-10">
+                    <div class="aspect-video relative z-40">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie2.png" alt="video">
-                            <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
+                            <!-- <div class="absolute top-0 h-full w-full bg-black opacity-40"></div> -->
                         </div>
-                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/uber.mp4" alt="video"></video>
+                        <video data-type="project" loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/uber.mp4" alt="video"></video>
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="project">
-                    <div class="aspect-video relative z-10">
+                    <div class="aspect-video relative z-40">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie3.png" alt="video">
-                            <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
+                            <!-- <div class="absolute top-0 h-full w-full bg-black opacity-40"></div> -->
                         </div>
-                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                        <video data-type="project" loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('long title of the video', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('long title of the video')"></h6>
                     </div>
                 </div>
-                <div class="relative h-fit"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative h-fit z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="project">
-                    <div class="aspect-video relative z-20">
+                    <div class="aspect-video relative z-40">
                         <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                             <img class="h-full w-full object-cover" src="../../../assets/images/movie4.png" alt="video">
-                            <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
+                            <!-- <div class="absolute top-0 h-full w-full bg-black opacity-40"></div> -->
                         </div>
-                        <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                        <video data-type="project" loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                     </div>
                     <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2 z-10" v-html="splitText('collection', true)"></h2>
                     <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('collection')"></h6>
                     </div>
                 </div>
-                <div class="relative"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                <div class="relative z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                     <div class="project">
-                        <div class="aspect-video relative z-20">
+                        <div class="aspect-video relative z-40">
                             <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                                 <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
-                                <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
+                                <!-- <div class="absolute top-0 h-full w-full bg-black opacity-40"></div> -->
                             </div>
-                            <video loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
+                            <video data-type="project" loop muted class="h-full w-auto object-cover" src="http://localhost:10018/wp-content/uploads/2022/11/60-Second-Cut.mp4" alt="video"></video>
                         </div>
                         <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2 z-10" v-html="splitText('long title of the video', true)"></h2>
                         <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('long title of the video')"></h6>
@@ -135,29 +136,28 @@
               </article>
               <div class="dot w-3 h-3 rounded-full bg-white absolute top-0 left-0 -translate-x-2/4 -translate-y-2/4"></div>
         </div>
-        <div  class="bottom-wrapper py-16 lg:py-0 lg:h-screen w-screen relative z-0 flex items-end justify-center">
-            <img @mouseover="hideReview()" class="hidden lg:block absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
-            <div @mousemove="(e) => followForReviews(e)" class=" w-full h-full overflow-hidden relative -z-10">
-              <div data-index="0" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
+        <div class="bottom-wrapper overflow-hidden py-16 lg:py-0 w-screen relative z-0 flex items-end justify-center">
+            <img @mouseover="hideReview()" class="absolute top-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-bottom.svg" alt="">
+            <div @mousemove="(e) => followForReviews(e)" @mouseover="toggleReview()" class=" w-full relative -z-10">
+              <div class="relative h-[100px] z-[-1]">
+                 <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
                 <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
+                </div>
               </div>
-              <div data-index="0" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
+              <div class="relative h-[100px] z-[-2]">
+                 <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
                 <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
+                </div>
               </div>
-              <div data-index="1" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[100px] rounded-full -translate-x-2/4">
+              <div class="relative h-[100px] z-[-3]">
+                 <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
                 <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
+                </div>
               </div>
-              <div data-index="2" @mouseover="toggleReview()" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[200px] rounded-full -translate-x-2/4">
-                <img class=" reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
-              </div>
-              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[300px] rounded-full -translate-x-2/4">
+              <div v-for="(review, index) in reviews" :key="index" :style="`z-index:-${index + 4}`" class="relative h-[100px]">
+                 <div :data-index="index" class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-0 rounded-full -translate-x-2/4">
                 <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
-              </div>
-              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[400px] rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
-              </div>
-              <div class="opacity-20 hover:opacity-50 w-[150vw] h-[150vw] absolute origin-bottom left-1/2 bottom-[500px] rounded-full -translate-x-2/4">
-                <img class="reviews-line pointer-events-none w-[150vw] h-[150vw] absolute origin-center bottom-0" src="../../../assets/images/layout/star2.svg" alt="">
+                </div>
               </div>
             </div>
         </div>
@@ -182,6 +182,7 @@ export default {
       reviewsAnimation: this.$gsap.timeline(),
       rotateAnimation: this.$gsap.timeline(),
       reviewVisible: this.$gsap.timeline(),
+      bubbleVisible: this.$gsap.timeline(),
       playPromise: undefined,
       reviews: [
         {
@@ -195,19 +196,14 @@ export default {
             "Lorem ipsum dolor sit amet hac mauris nunc lectus. Quisque proin a mauris vulputate phasellus nisi curabitur neque sapien feugiat senectus fringilla aliqua ultrices. Eiusmod pellentesque consequat tempor eros suspendisse lacus at duis nisl augue eget tristique ac quisque. Vitae eget ornare faucibus augue urna hac elementum mollis urna imperdiet.",
         },
         {
-          name: "Lucian, Akva",
+          name: "Marlene, Akva",
           comment:
-            "Nunc rhoncus mauris netus sed aliquam volutpat enim. Vestibulum bibendum sapien etiam nec at ultricies laoreet mauris consectetur lacus mauris incididunt luctus.",
+            "We love antenna very good company. We are happy with the final result.",
         },
         {
           name: "Sylvia, Kea",
           comment:
             "Lorem ipsum dolor sit amet hac mauris nunc lectus. Quisque proin a mauris vulputate phasellus nisi curabitur neque sapien feugiat senectus fringilla aliqua ultrices. Eiusmod pellentesque consequat tempor eros suspendisse lacus at duis nisl augue eget tristique ac quisque. Vitae eget ornare faucibus augue urna hac elementum mollis urna imperdiet.",
-        },
-        {
-          name: "Marlene, Akva",
-          comment:
-            "We love antenna very good company. We are happy with the final result.",
         },
       ],
       displayedReview: {
@@ -444,6 +440,64 @@ export default {
         ease: "none",
       });
     },
+    followForProjects(event) {
+      console.log(event.target.getAttribute("data-type"));
+      let bubble = document.querySelector(".projectsBubble");
+      this.followAnimation = this.$gsap;
+
+      if (event.target.getAttribute("data-type") === "project") {
+        this.followAnimation.to(bubble, {
+          scale: 1,
+        });
+      } else {
+        this.followAnimation.to(bubble, {
+          scale: 0.5,
+        });
+      }
+
+      this.followAnimation.to(bubble, {
+        x: event.pageX,
+        y: event.pageY,
+      });
+    },
+    toggleBubble() {
+      // console.log(event.target.getAttribute("data-type"));
+      let bubble = document.querySelector(".projectsBubble");
+
+      this.bubbleVisible = this.$gsap.timeline();
+
+      this.bubbleVisible.to(
+        bubble,
+        {
+          display: "block",
+          duration: 0,
+        },
+        0
+      );
+      this.bubbleVisible.to(
+        bubble,
+        {
+          scale: 1,
+          duration: 0.8,
+        },
+        0
+      );
+    },
+    hideBubble() {
+      console.log("mouse is out");
+      let bubble = document.querySelector(".projectsBubble");
+
+      this.bubbleVisible = this.$gsap.timeline();
+
+      this.bubbleVisible.to(
+        bubble,
+        {
+          scale: 0,
+          duration: 0.8,
+        },
+        0
+      );
+    },
     followForReviews(event) {
       console.log(event.target.getAttribute("data-index"));
       let reviewsIndex = event.target.getAttribute("data-index")
@@ -532,6 +586,16 @@ export default {
 
 .fatherContainer {
   background: linear-gradient(180deg, rgba(0, 40, 253, 0) 0%, #0029ff 100%);
+}
+
+.projectsBubble {
+  background: radial-gradient(
+      48.26% 48.26% at 50% 50%,
+      #cecece 0%,
+      #e3e3cc 50%,
+      #ccb641 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }
 
 // .bottom-wrapper {
