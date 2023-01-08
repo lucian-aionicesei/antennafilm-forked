@@ -1,17 +1,15 @@
 <template>
   <section class="relative w-screen overflow-hidden bg-primary">
       <div @click="sendSignal()" class="fatherContainer bg-black h-auto lg:h-screen flex lg:items-center relative">
-        <video loop muted autoplay class="aspect-video absolute top-0 left-0 object-cover h-fit w-full z-0 hidden lg:block" src="../../../assets/images/Showreel.mp4" alt="video"></video>
+        <video loop muted autoplay class="aspect-video absolute top-0 left-0 object-cover h-fit w-full z-0 hidden lg:block" :src="page.acf.hero_video" alt="video"></video>
         <div class="h-full w-full bg-black opacity-30 absolute top-0 left-0"></div>
           <img class="pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
           <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10 px-0 md:px-16 max-w-screen-2xl mx-auto">
                   <div class="flex flex-col justify-between px-5 md:px-0 lg:pr-[5vw] col-span-3 lg:col-span-1 relative">
-                      <div class="pt-10 max-w-[400px] md:min-w-[350px]">
-                          <p>Antenna Film is a Copenhagen and London-based digital content studio and full-service production company specialising in the creation and execution of content.</p>
-                          <p>We are creatives, directors, producers, designers, and post-production artists committed to developing engaging, high-end multi-platform content for brands, agencies, and artists.</p>
+                      <div class="pt-10 max-w-[400px] md:min-w-[350px]" v-html="page.acf.intro_text">
                       </div>
-                      <div class="flex items-center border-l-2 border-accent1 h-10">
-                          <a href="#" class="pl-4 font-bold">about Antenna</a>
+                      <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
+                        <nuxt-link to="/about" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">About antenna</nuxt-link>
                       </div>
                   </div>
                   <div class="h-fit lg:h-full col-start-1 row-start-1 col-span-3 lg:col-start-2 lg:col-span-2 lg:pl-[5vw] flex justify-start items-center">
@@ -38,11 +36,6 @@
                 <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[650px]" src="../../../assets/images/layout/star.svg" alt="">
                 <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[725px]" src="../../../assets/images/layout/star.svg" alt="">
                 <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[800px]" src="../../../assets/images/layout/star.svg" alt="">
-                <!-- <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[900px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1050px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1200px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1400px]" src="../../../assets/images/layout/star.svg" alt="">
-                <img class="wave absolute origin-bottom-right -translate-y-2/4 -translate-x-2/4 w-[1700px]" src="../../../assets/images/layout/star.svg" alt=""> -->
             </div>
           </div>
       <content-wrapper bgColor="dark">
@@ -55,8 +48,21 @@
               <div class=" pointer-events-none">
 
               </div>
-              <div class="relative h-fit z-40" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+              <!-- <div class="relative h-fit z-40" ref="project" v-for="(project, index) in page.acf.selected_projects" :key="index"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
                   <div class="project">
+                  <div class="aspect-video relative z-40">
+                      <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
+                          <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
+                          <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
+                      </div>
+                      <video data-type="project" loop muted class="h-full w-auto object-cover" src="../../../assets/images/uber.mp4" alt="video"></video>
+                  </div>
+                  <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText(project.post_title, true)"></h2>
+                  <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText(project.post_title)"></h6>
+                  </div>
+              </div> -->
+              <div class="relative h-fit z-40" ref="project"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
+                  <nuxt-link to="/uber-commercial" class="project">
                   <div class="aspect-video relative z-40">
                       <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                           <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
@@ -66,10 +72,10 @@
                   </div>
                   <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('Uber | Safer cities', true)"></h2>
                   <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('Uber | Safer cities')"></h6>
-                  </div>
+                </nuxt-link>
               </div>
               <div class="relative h-fit z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                  <div class="project">
+                <nuxt-link to="/uber-commercial" class="project">
                   <div class="aspect-video relative z-40">
                       <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                           <img class="h-full w-full object-cover" src="../../../assets/images/movie2.png" alt="video">
@@ -79,10 +85,10 @@
                   </div>
                   <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('Uber | Safer cities', true)"></h2>
                   <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('Uber | Safer cities')"></h6>
-                  </div>
+                </nuxt-link>
               </div>
               <div class="relative h-fit z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                  <div class="project">
+                <nuxt-link to="/uber-commercial" class="project">
                   <div class="aspect-video relative z-40">
                       <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                           <img class="h-full w-full object-cover" src="../../../assets/images/movie3.png" alt="video">
@@ -92,10 +98,10 @@
                   </div>
                   <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2" v-html="splitText('Mærsk | Company promo', true)"></h2>
                   <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-0" v-html="splitText('Mærsk | Company promo')"></h6>
-                  </div>
+                </nuxt-link>
               </div>
               <div class="relative h-fit z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                  <div class="project">
+                <nuxt-link to="/uber-commercial" class="project">
                   <div class="aspect-video relative z-40">
                       <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                           <img class="h-full w-full object-cover" src="../../../assets/images/movie4.png" alt="video">
@@ -105,10 +111,10 @@
                   </div>
                   <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2 z-10" v-html="splitText('Nike | Product promo', true)"></h2>
                   <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('Nike | Product promo')"></h6>
-                  </div>
+                </nuxt-link>
               </div>
               <div class="relative z-40"  @mouseenter="(e) => {desktopSize && playVideo(e)}" @mouseleave="(e) => {desktopSize && stopVideo(e)}">
-                  <div class="project">
+                <nuxt-link to="/uber-commercial" class="project">
                       <div class="aspect-video relative z-40">
                           <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                               <img class="h-full w-full object-cover" src="../../../assets/images/60sec.png" alt="video">
@@ -118,15 +124,15 @@
                       </div>
                       <h2 class="pt-2 pb-8 lg:py-0 font-bold lg:absolute lg:translate-y-[2.7rem] bottom-0 w-max text-lg sm:text-xl md:text-3xl text-zinc-300 flex gap-x-2 z-10" v-html="splitText('Antenna | 2022 reel', true)"></h2>
                       <h6 class="absolute bottom-0 origin-bottom-left rotate-[270deg] pb-1 text-neutral-500 flex gap-x-1 z-10" v-html="splitText('Antenna | 2022 reel')"></h6>
-                  </div>
+                    </nuxt-link>
               </div>
           </article>
       </content-wrapper>
       <div class="w-full bg-secondary">
           <div class="pb-20 pt-10 lg:pb-0 relative bg-secondary w-full max-w-screen-2xl m-auto px-0 md:px-16">
-              <div class="flex items-center border-l-2 border-accent1 h-10 lg:absolute z-20 lg:translate-y-32 ml-5 md:ml-0">
-                <a href="#" class="pl-4 font-bold">see more projects</a>
-              </div>
+            <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
+                        <nuxt-link to="/projects" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">See more projects</nuxt-link>
+            </div>
           </div>
       </div>
       <div class="bottom-wrapper overflow-hidden 2xl:pt-32 lg:py-0 w-screen relative z-0 flex items-end justify-center">
@@ -179,6 +185,14 @@ import Waves from "./partials/Waves.vue";
 
 export default {
   components: { ContentWrapper, Waves },
+  props: {
+    page: {
+      type: Object,
+      default: function () {
+        return {};
+      },
+    },
+  },
   data() {
     return {
       textAnimation: this.$gsap.timeline(),
@@ -225,11 +239,13 @@ export default {
     };
   },
   mounted() {
-    this.videoInView();
+    // this.videoInView();
     // this.animateLogoSlider();
     // this.animateTitle();
     this.rotateFlower();
     console.log(this.$MotionPathPlugin);
+    console.log(this.page);
+    console.log(this.page.acf.selected_projects);
   },
   computed: {
     desktopSize() {

@@ -28,13 +28,13 @@
       <div @mousemove="(e) => followMouse(e)" class="pt-32 px-0 md:px-16 relative">
         <div ref="projects" class="all-projects px-5 md:px-0 lg:px-[8vw] max-w-screen-2xl m-auto">
         <div class="project-container flex flex-col lg:grid px-5 md:px-0 pb-14 lg:pb-24">
-            <div class="aspect-video relative z-40 col-span-2">
+            <nuxt-link to="/uber-commercial" class="aspect-video relative z-40 col-span-2">
               <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                   <img class="h-full w-full object-cover" src="../../../assets/images/movie2.png" alt="video">
                   <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
               </div>
               <video data-type="project" loop muted class="h-full w-auto object-cover cursor-none" src="../../../assets/images/royal.mp4" alt="video"></video>
-            </div>
+            </nuxt-link>
             <article class="pl-0 lg:pl-5 pt-5 lg:pt-0 flex justify-between items-center lg:block z-40">
               <section>
                 <h2 class="pb-2 text-xl xl:text-2xl flex gap-x-2" v-html="splitText('The cocktail company')"></h2>
@@ -44,18 +44,18 @@
                 </div>
               </section>
               <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
-                  <a href="#" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</a>
+                <nuxt-link to="/uber-commercial" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</nuxt-link>
               </div>
             </article>
         </div>
         <div class="project-container flex flex-col lg:grid px-5 md:px-0 pb-14 lg:pb-24">
-            <div class="aspect-video relative z-40 col-span-2">
+            <nuxt-link to="/uber-commercial" class="aspect-video relative z-40 col-span-2">
               <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                   <img class="h-full w-full object-cover" src="../../../assets/images/movie3.png" alt="video">
                   <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
               </div>
               <video data-type="project" loop muted class="h-full w-auto object-cover cursor-none" src="../../../assets/images/uber.mp4" alt="video"></video>
-            </div>
+            </nuxt-link>
             <article class="pl-0 lg:pl-5 pt-5 lg:pt-0 flex justify-between items-center lg:block z-40">
               <section>
                 <h2 class="pb-2 text-xl xl:text-2xl flex gap-x-2" v-html="splitText('The cocktail company')"></h2>
@@ -65,18 +65,18 @@
                 </div>
               </section>
               <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
-                  <a href="#" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</a>
+                  <nuxt-link to="/uber-commercial" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</nuxt-link>
               </div>
             </article>
         </div>
         <div class="project-container flex flex-col lg:grid px-5 md:px-0 pb-14 lg:pb-24">
-            <div class="aspect-video relative z-40 col-span-2">
+            <nuxt-link to="/uber-commercial" class="aspect-video relative z-40 col-span-2">
               <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                   <img class="h-full w-full object-cover" src="../../../assets/images/movie4.png" alt="video">
                   <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
               </div>
               <video data-type="project" loop muted class="h-full w-auto object-cover cursor-none" src="../../../assets/images/royal.mp4" alt="video"></video>
-            </div>
+            </nuxt-link>
             <article class="pl-0 lg:pl-5 pt-5 lg:pt-0 flex justify-between items-center lg:block z-40">
               <section>
                 <h2 class="pb-2 text-xl xl:text-2xl flex gap-x-2" v-html="splitText('The cocktail company')"></h2>
@@ -86,18 +86,18 @@
                 </div>
               </section>
               <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
-                  <a href="#" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</a>
+                  <nuxt-link to="/uber-commercial" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</nuxt-link>
               </div>
             </article>
         </div>
         <div class="project-container flex flex-col lg:grid px-5 md:px-0 pb-14 lg:pb-24">
-            <div class="aspect-video relative z-40 col-span-2">
+            <nuxt-link to="/uber-commercial" class="aspect-video relative z-40 col-span-2">
               <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                   <img class="h-full w-full object-cover" src="../../../assets/images/process2.png" alt="video">
                   <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
               </div>
               <video data-type="project" loop muted class="h-full w-auto object-cover cursor-none" src="../../../assets/images/uber.mp4" alt="video"></video>
-            </div>
+            </nuxt-link>
             <article class="pl-0 lg:pl-5 pt-5 lg:pt-0 flex justify-between items-center lg:block z-40">
               <section>
                 <h2 class="pb-2 text-xl xl:text-2xl flex gap-x-2" v-html="splitText('The cocktail company')"></h2>
@@ -107,18 +107,18 @@
                 </div>
               </section>
               <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
-                  <a href="#" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</a>
+                  <nuxt-link to="/uber-commercial" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</nuxt-link>
               </div>
             </article>
         </div>
         <div class="project-container flex flex-col lg:grid px-5 md:px-0 pb-14 lg:pb-24">
-            <div class="aspect-video relative z-40 col-span-2">
+            <nuxt-link to="/uber-commercial" class="aspect-video relative z-40 col-span-2">
               <div class="img-overlay absolute w-full h-full transition-opacity duration-300">
                   <img class="h-full w-full object-cover" src="../../../assets/images/movie2.png" alt="video">
                   <div class="absolute top-0 h-full w-full bg-black opacity-40"></div>
               </div>
               <video data-type="project" loop muted class="h-full w-auto object-cover cursor-none" src="../../../assets/images/royal.mp4" alt="video"></video>
-            </div>
+            </nuxt-link>
             <article class="pl-0 lg:pl-5 pt-5 lg:pt-0 flex justify-between items-center lg:block z-40">
               <section>
                 <h2 class="pb-2 text-xl xl:text-2xl flex gap-x-2" v-html="splitText('The cocktail company')"></h2>
@@ -128,7 +128,7 @@
                 </div>
               </section>
               <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
-                  <a href="#" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</a>
+                  <nuxt-link to="/uber-commercial" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">see project</nuxt-link>
               </div>
             </article>
         </div>
@@ -175,7 +175,7 @@ export default {
 
       projects.forEach((project) => {
         // for project each statement
-        console.log(project);
+        // console.log(project);
 
         tl.to(project, {
           scrollTrigger: {

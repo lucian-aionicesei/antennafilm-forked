@@ -62,7 +62,8 @@ export default {
 
     // With options
     ['wp-nuxt', {
-      endpoint: 'http://antennafilm.local/wp-json',
+      // endpoint: 'http://antennafilm.local/wp-json',
+      endpoint: 'http://antenna-admin.graphite.dk/wp-json',
       extensions: true // For additional functions of wpapi-extensions
       /* other options of WP-API */,
       customRoutes: [
