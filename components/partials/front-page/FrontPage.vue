@@ -1,12 +1,14 @@
 <template>
   <section class="relative w-screen overflow-hidden bg-primary">
       <div @click="sendSignal()" class="fatherContainer bg-black h-auto lg:h-screen flex lg:items-center relative">
-        <video loop muted autoplay class="aspect-video absolute top-0 left-0 object-cover h-fit w-full z-0 hidden lg:block" :src="page.acf.hero_video" alt="video"></video>
+        <video loop muted autoplay class="aspect-video absolute top-0 left-0 object-cover h-fit w-full z-0 hidden lg:block" src="../../../assets/images/Showreel.mp4" alt="video"></video>
         <div class="h-full w-full bg-black opacity-30 absolute top-0 left-0"></div>
           <img class="pointer-events-none absolute bottom-0 left-0 w-screen h-auto z-0" src="../../../assets/images/layout/intersect-top.svg" alt="">
           <article class="grid grid-cols-3 bg-green-800w pt-0 pb-16 md:py-16 lg:pb-0 lg:pt-10 px-0 md:px-16 max-w-screen-2xl mx-auto">
                   <div class="flex flex-col justify-between px-5 md:px-0 lg:pr-[5vw] col-span-3 lg:col-span-1 relative">
-                      <div class="pt-10 max-w-[400px] md:min-w-[350px]" v-html="page.acf.intro_text">
+                      <div class="pt-10 max-w-[400px] md:min-w-[350px]">
+                        <p>Antenna Film is a Copenhagen and London-based digital content studio and full-service production company specialising in the creation and execution of content.</p>
+                        <p>We are creatives, directors, producers, designers, and post-production artists committed to developing engaging, high-end multi-platform content for brands, agencies, and artists.</p>
                       </div>
                       <div class="link-button flex items-center border-l-2 border-accent1 h-10 overflow-hidden">
                         <nuxt-link to="/about" class="px-4 font-bold h-full hover:bg-accent1 flex items-center">About antenna</nuxt-link>
@@ -245,7 +247,6 @@ export default {
     this.rotateFlower();
     console.log(this.$MotionPathPlugin);
     console.log(this.page);
-    console.log(this.page.acf.selected_projects);
   },
   computed: {
     desktopSize() {
